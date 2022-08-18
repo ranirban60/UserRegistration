@@ -1,5 +1,6 @@
 /*
-User need to enter a valid password of 8 character with at least one upper case
+User need to enter a valid password of 8 character with at least one upper case with
+ one numeric number
  */
 package com.bridgelabz;
 import java.util.regex.Pattern;
@@ -36,6 +37,6 @@ public class UserRegistration {
     }
 
     public static boolean givenPassword_IfValid_ReturnTrue(String validUserPassword) {
-        return Pattern.matches("^(?=.*[A-Z])[a-zA-Z0-9 !@#$%^&*(){}'.,+-_]{8,}", validUserPassword);
+        return Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9 !@#$%^&*(){}'.,+-_]{8,}", validUserPassword);
     }
 }
