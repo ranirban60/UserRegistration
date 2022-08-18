@@ -1,8 +1,7 @@
 /*
-User need to enter a valid First Name
+User need to enter a valid Last Name
  */
 package com.bridgelabz;
-
 import java.util.regex.Pattern;
 
 public class UserRegistration {
