@@ -2,6 +2,7 @@
 User need to enter a valid password of 8 character with at least one upper case with
  one numeric number and one special character
  */
+
 package com.bridgelabz;
 import java.util.regex.Pattern;
 
