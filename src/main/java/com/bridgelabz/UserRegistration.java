@@ -27,6 +27,6 @@ public class UserRegistration {
         return Pattern.matches("^[a-z]+([_+.-]?[a-z0-9])*(@)(bl.co.)[a-z]{2}$", validUserEmail);
     }
     public static boolean givenMobileNum_IfValid_ReturnTrue(String validUserMobileNum) {
-        return Pattern.matches("^[]0-9]{2}[\s][1-9][0-9]{9}", validUserMobileNum);
+        return Pattern.matches("^[0-9]{2}[\s][1-9][0-9]{9}", validUserMobileNum);
     }
 }
