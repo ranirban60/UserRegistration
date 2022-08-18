@@ -20,15 +20,12 @@ public class UserRegistration {
     private static boolean givenFirstName_IfValid_ReturnTrue(String validFirstname) {
         return Pattern.matches("^[A-Z][a-z]{2,}", validFirstname);
     }
-
     public static boolean givenLastName_IfValid_ReturnTrue(String validLastName) {
         return Pattern.matches("^[A-Z][a-z]{2,}", validLastName);
     }
-
     public static boolean givenEmail_IfValid_ReturnTrue(String validUserEmail) {
         return Pattern.matches("^[a-z]+([_+.-]?[a-z0-9])*(@)(bl.co.)[a-z]{2}$", validUserEmail);
     }
-
     public static boolean givenMobileNum_IfValid_ReturnTrue(String validUserMobileNum) {
         return Pattern.matches("^[]0-9]{2}[\s][1-9][0-9]{9}", validUserMobileNum);
     }
