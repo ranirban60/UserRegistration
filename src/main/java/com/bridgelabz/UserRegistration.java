@@ -33,7 +33,7 @@ public class UserRegistration {
     }
 
     public static boolean givenMobileNum_IfValid_ReturnTrue(String validUserMobileNum) {
-        return Pattern.matches("^[]0-9]{2}[\s][1-9][0-9]{9}", validUserMobileNum);
+        return Pattern.matches("^[0-9]{2}[\s][1-9][0-9]{9}", validUserMobileNum);
     }
 
     public static boolean givenPassword_IfValid_ReturnTrue(String validUserPassword) {
