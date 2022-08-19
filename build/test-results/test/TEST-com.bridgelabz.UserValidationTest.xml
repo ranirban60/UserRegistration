@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bridgelabz.UserValidationTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-08-19T06:19:39" hostname="DESKTOP-42C79FL" time="0.06">
+  <properties/>
+  <testcase name="happyMobileNumber()" classname="com.bridgelabz.UserValidationTest" time="0.036"/>
+  <testcase name="sadMobileNumber()" classname="com.bridgelabz.UserValidationTest" time="0.002"/>
+  <testcase name="happyLastName()" classname="com.bridgelabz.UserValidationTest" time="0.001"/>
+  <testcase name="happyFirstName()" classname="com.bridgelabz.UserValidationTest" time="0.002"/>
+  <testcase name="sadPassword()" classname="com.bridgelabz.UserValidationTest" time="0.001"/>
+  <testcase name="sadFirstName()" classname="com.bridgelabz.UserValidationTest" time="0.002"/>
+  <testcase name="happyEmail()" classname="com.bridgelabz.UserValidationTest" time="0.002"/>
+  <testcase name="sadLastName()" classname="com.bridgelabz.UserValidationTest" time="0.001"/>
+  <testcase name="happyPassword()" classname="com.bridgelabz.UserValidationTest" time="0.001"/>
+  <testcase name="sadEmail()" classname="com.bridgelabz.UserValidationTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
