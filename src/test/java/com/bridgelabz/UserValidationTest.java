@@ -3,48 +3,103 @@ package com.bridgelabz;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-
 public class UserValidationTest {
-    UserValidation obj = new UserValidation();
-
     @Test
-    public void happyFirstName(){
-        Assertions.assertTrue(obj.validFirstName("Ani"));
+    public void happyFirstName() {
+        try {
+            Assertions.assertTrue(UserValidation.validFirstName("Ani"));
+            System.out.println("FirstName is Valid \n");
+        } catch (InvalidNameException e) {
+            System.out.println("A problem occurred: " + e);
+        }
     }
     @Test
     public void sadFirstName(){
-        Assertions.assertFalse(obj.validFirstName("anirban Roy"));
+       try {
+           Assertions.assertFalse(UserValidation.validFirstName("anirban Roy"));
+           System.out.println("FirstName is Invalid \n");
+       } catch (InvalidNameException e) {
+        System.out.println("A problem occurred: " + e);
     }
+}
+
     @Test
-    public void happyLastName(){
-        Assertions.assertTrue(obj.validLastName("Roy"));
+    public void happyLastName() {
+        try {
+            Assertions.assertTrue(UserValidation.validLastName("Roy"));
+            System.out.println("LastName is Valid \n");
+        } catch (InvalidNameException e) {
+            System.out.println("A problem occurred: " + e);
+        }
     }
+
     @Test
     public void sadLastName() {
-        Assertions.assertFalse(obj.validLastName("anirban Roy"));
+        try{
+            Assertions.assertFalse(UserValidation.validLastName("anirban Roy"));
+            System.out.println("LastName is Invalid \n");
+        } catch (InvalidNameException e) {
+            System.out.println("A problem occurred: " + e);
+        }
     }
     @Test
     public void happyEmail() {
-        Assertions.assertTrue(obj.validEmail("abc.xyz@bl.co.in"));
+        try{
+            Assertions.assertTrue(UserValidation.validEmail("abc.xyz@bl.co.in"));
+            System.out.println("Email is Valid \n");
+        }
+        catch (InvalidEmailException e){
+            System.out.println("A problem occurred: " + e);
+        }
     }
     @Test
     public void sadEmail(){
-        Assertions.assertFalse(obj.validEmail("abc@"));
+        try{
+            Assertions.assertFalse(UserValidation.validEmail("abc@"));
+            System.out.println("Email is Invalid \n");
+        }
+        catch (InvalidEmailException e){
+            System.out.println("A problem occurred: " + e);
+        }
     }
     @Test
     public void happyMobileNumber() {
-        Assertions.assertTrue(obj.validMobileNumber("91 1234567890"));
+       try{
+           Assertions.assertTrue(UserValidation.validMobileNumber("91 1234567890"));
+           System.out.println("Phone Number is Valid \n");
+       }
+       catch (InvalidPhoneNumberException e){
+           System.out.println("A problem occurred: " + e);
+       }
     }
     @Test
     public void sadMobileNumber(){
-        Assertions.assertFalse(obj.validMobileNumber("91 1234578909888"));
+       try{
+           Assertions.assertFalse(UserValidation.validMobileNumber("91 1234578909888"));
+           System.out.println("Phone Number is Invalid \n");
+       }
+       catch (InvalidPhoneNumberException e){
+           System.out.println("A problem occurred: " + e);
+       }
     }
     @Test
     public void happyPassword() {
-        Assertions.assertTrue(obj.validPassword("Qwerty@123"));
+       try{
+           Assertions.assertTrue(UserValidation.validPassword("Qwerty@123"));
+           System.out.println("Password is Valid \n");
+       }
+       catch (InvalidPasswordException e){
+           System.out.println("A problem occurred: " + e);
+       }
     }
     @Test
     public void sadPassword(){
-        Assertions.assertFalse(obj.validPassword("@1322424"));
+       try{
+           Assertions.assertFalse(UserValidation.validPassword("@1322424"));
+           System.out.println("Password is Invalid \n");
+       }
+       catch (InvalidPasswordException e){
+           System.out.println("A problem occurred: " + e);
+       }
     }
 }
