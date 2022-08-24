@@ -4,102 +4,49 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class UserValidationTest {
+    UserValidation obj = new UserValidation();
     @Test
     public void happyFirstName() {
-        try {
-            Assertions.assertTrue(UserValidation.validFirstName("Ani"));
-            System.out.println("FirstName is Valid \n");
-        } catch (InvalidNameException e) {
-            System.out.println("A problem occurred: " + e);
-        }
+        Assertions.assertTrue(obj.validFirstName("Ani"));
+
     }
     @Test
     public void sadFirstName(){
-       try {
-           Assertions.assertFalse(UserValidation.validFirstName("anirban Roy"));
-           System.out.println("FirstName is Invalid \n");
-       } catch (InvalidNameException e) {
-        System.out.println("A problem occurred: " + e);
-    }
+           Assertions.assertFalse(obj.validFirstName("anirban Roy"));
 }
 
     @Test
     public void happyLastName() {
-        try {
-            Assertions.assertTrue(UserValidation.validLastName("Roy"));
-            System.out.println("LastName is Valid \n");
-        } catch (InvalidNameException e) {
-            System.out.println("A problem occurred: " + e);
-        }
+            Assertions.assertTrue(obj.validLastName("Roy"));
     }
 
     @Test
     public void sadLastName() {
-        try{
-            Assertions.assertFalse(UserValidation.validLastName("anirban Roy"));
-            System.out.println("LastName is Invalid \n");
-        } catch (InvalidNameException e) {
-            System.out.println("A problem occurred: " + e);
-        }
+            Assertions.assertFalse(obj.validLastName("anirban Roy"));
     }
     @Test
     public void happyEmail() {
-        try{
-            Assertions.assertTrue(UserValidation.validEmail("abc.xyz@bl.co.in"));
-            System.out.println("Email is Valid \n");
-        }
-        catch (InvalidEmailException e){
-            System.out.println("A problem occurred: " + e);
-        }
+            Assertions.assertTrue(obj.validEmail("abc.xyz@bl.co.in"));
     }
     @Test
     public void sadEmail(){
-        try{
-            Assertions.assertFalse(UserValidation.validEmail("abc@"));
-            System.out.println("Email is Invalid \n");
-        }
-        catch (InvalidEmailException e){
-            System.out.println("A problem occurred: " + e);
-        }
+            Assertions.assertFalse(obj.validEmail("abc@"));
     }
     @Test
     public void happyMobileNumber() {
-       try{
-           Assertions.assertTrue(UserValidation.validMobileNumber("91 1234567890"));
-           System.out.println("Phone Number is Valid \n");
-       }
-       catch (InvalidPhoneNumberException e){
-           System.out.println("A problem occurred: " + e);
-       }
+           Assertions.assertTrue(obj.validMobileNumber("91 1234567890"));
     }
     @Test
     public void sadMobileNumber(){
-       try{
-           Assertions.assertFalse(UserValidation.validMobileNumber("91 1234578909888"));
-           System.out.println("Phone Number is Invalid \n");
-       }
-       catch (InvalidPhoneNumberException e){
-           System.out.println("A problem occurred: " + e);
-       }
+           Assertions.assertFalse(obj.validMobileNumber("91 1234578909888"));
     }
     @Test
     public void happyPassword() {
-       try{
-           Assertions.assertTrue(UserValidation.validPassword("Qwerty@123"));
-           System.out.println("Password is Valid \n");
-       }
-       catch (InvalidPasswordException e){
-           System.out.println("A problem occurred: " + e);
-       }
+           Assertions.assertTrue(obj.validPassword("Qwerty@123"));
     }
     @Test
     public void sadPassword(){
-       try{
-           Assertions.assertFalse(UserValidation.validPassword("@1322424"));
-           System.out.println("Password is Invalid \n");
-       }
-       catch (InvalidPasswordException e){
-           System.out.println("A problem occurred: " + e);
-       }
+           Assertions.assertFalse(obj.validPassword("@1322424"));
+
     }
 }
