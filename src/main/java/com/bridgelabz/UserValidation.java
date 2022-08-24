@@ -5,7 +5,7 @@ mobile and password
 package com.bridgelabz;
 
 import java.util.function.Predicate;
-import java.util.regex.Matcher;
+//import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserValidation {
@@ -16,7 +16,7 @@ public class UserValidation {
      */
     public static boolean validFirstName(String userFirstName){
         Pattern pattern = Pattern.compile("^[A-Z][a-z]{2,}");
-        Matcher matcher = pattern.matcher(userFirstName);
+        //Matcher matcher = pattern.matcher(userFirstName);
         Predicate<Pattern> matcherPredicate = match -> match.matcher(userFirstName).matches();
         return matcherPredicate.test(pattern);
     }
@@ -28,7 +28,7 @@ public class UserValidation {
      */
     public static boolean validLastName(String userLastName) {
         Pattern pattern = Pattern.compile("^[A-Z][a-z]{2,}");
-        Matcher matcher = pattern.matcher(userLastName);
+       // Matcher matcher = pattern.matcher(userLastName);
         Predicate<Pattern> matcherPredicate = match -> match.matcher(userLastName).matches();
         return matcherPredicate.test(pattern);
     }
@@ -40,7 +40,7 @@ public class UserValidation {
      */
     public static boolean validEmail(String userEmail) {
         Pattern pattern = Pattern.compile("^[a-z]+([_+.-]?[a-z0-9])*(@)(bl.co.)[a-z]{2}$");
-        Matcher matcher = pattern.matcher(userEmail);
+       // Matcher matcher = pattern.matcher(userEmail);
         Predicate<Pattern> matcherPredicate = match -> match.matcher(userEmail).matches();
         return matcherPredicate.test(pattern);
     }
@@ -51,7 +51,7 @@ public class UserValidation {
      */
     public static boolean validMobileNumber(String userMobileNumber)  {
         Pattern pattern = Pattern.compile("^[0-9]{2}[ ][1-9][0-9]{9}$");
-        Matcher matcher = pattern.matcher(userMobileNumber);
+        //Matcher matcher = pattern.matcher(userMobileNumber);
         Predicate<Pattern> matcherPredicate = match -> match.matcher(userMobileNumber).matches();
         return matcherPredicate.test(pattern);
     }
@@ -62,7 +62,7 @@ public class UserValidation {
      */
     public static boolean validPassword(String userPassword) {
         Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*(){}'.,+_-])[a-zA-Z0-9 !@#$%^&*(){}'.,+_-]{8,}");
-        Matcher matcher = pattern.matcher(userPassword);
+        //Matcher matcher = pattern.matcher(userPassword);
         Predicate<Pattern> matcherPredicate = match -> match.matcher(userPassword).matches();
         return matcherPredicate.test(pattern);
     }
